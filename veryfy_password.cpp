@@ -19,7 +19,7 @@ int main()
     int count=0;
 
   
-    for(int i=0;i<r;i++)
+    for(int i=0;i<r-1;i++)
     {
       if(isalpha(pass[i]) &&  isdigit(pass[i+1]))
       {
@@ -28,15 +28,9 @@ int main()
         break;
       }  
     }
-    for(int i=0;i<pass.size();i++)
-    {
-      if(isdigit(pass[i]))
-      {
-        pass.erase(i,1);
-      }
-    }
-    cout<<pass<<endl;
-    for(int i=0;i<pass.size();i++)
+    
+    
+    for(int i=0;i<pass.size()-1;i++)
     {
       if(pass[i]>pass[i+1])
       {
@@ -44,14 +38,10 @@ int main()
         break;
       }
     }
-    for(int i=0;i<temp.size();i++)
-    {  
-      if(isdigit(temp[i]))
-      {
-        cout<<i<<" ";
-      }
-    }
-      cout<<temp<<endl;
+    
+    
+    if(count==0)cout<<"Yes"<<endl;
+    else {cout<<"No"<<endl;}
 
 
   }

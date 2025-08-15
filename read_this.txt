@@ -1,0 +1,6 @@
+Author: Zisan ahmed Rabby 
+This not profrssional code this is my practice code 
+hello world
+
+its only for test purpost not take it serously 
+i am new in git & github

@@ -15,6 +15,7 @@ int main()
   char  b='0';
   int count=0;
 
+  if(s.length()<3)count++;
   if(s[0]!=a || s[1]!=b)
     {count++;}
   

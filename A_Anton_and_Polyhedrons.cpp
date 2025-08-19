@@ -22,5 +22,6 @@ int main()
         sum+=m[s];
     }
     cout<<sum<<endl;
+    return 0;
 
 }

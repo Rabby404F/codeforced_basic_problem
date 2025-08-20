@@ -3,37 +3,21 @@
 using namespace std;
 
 int main()
-{
-  int t;
-  cin>>t;
-  while(t--)
-  {
+{ int t;
+    cin>>t;
+    while(t--)
+    {
+  string root="codeforces";
   string s;
   cin>>s;
-
   int n=s.length();
-  
-  int cnt;
-do{
-  cnt=0;
+  int count=0;
+
   for(int i=0;i<n;i++)
-  { 
-    if(s[i]==s[i+1])
-    {
-        s[i]='b';
-        s.erase(i+1,1);
-        n--;
-        
-    }
-
-    for(int j=0;j<n;j++)
-    {
-      if(s[j]==s[j+1])cnt++;
-    }
+  {
+    if(root[i]!=s[i])count++;
   }
-}while(cnt!=0);
-
-  cout<<s.length()<<endl;
-  }
-
+  cout<<count<<endl;
+}
+return 0;
 }

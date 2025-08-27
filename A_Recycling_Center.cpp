@@ -18,7 +18,9 @@ int main()
     int count=0;
     for(int i=0;i<n;i++)
     {
-       if(arr[i]>c){count++;} 
+       if(arr[i]>c){
+        arr[i]=0;
+        count++;} 
        
         for(int j=i+1;j<n;j++)
         {

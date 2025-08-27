@@ -13,7 +13,7 @@ int main()
         if(j==n-1){s.push_back('#');}
         else{s.push_back('.');}
     }
-    cout<<s<<endl;
+   
     for(int i=0;i<m;i++)
     {
         if(i%2==0)

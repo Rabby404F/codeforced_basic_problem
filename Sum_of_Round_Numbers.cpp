@@ -2,7 +2,11 @@
 #include<vector>
 using namespace std;
 int main()
-{
+{ int t;
+    cin>>t;
+
+    while(t--)
+    {
     long long x;
     cin>>x;
     vector<long long>v;
@@ -25,4 +29,6 @@ int main()
     }
     cout<<count<<endl;
     for(auto u:v)cout<<u<<" ";
+}
+return 0;
 }

@@ -1,1 +1,1 @@
- cout<<max_loc<<endl;
+cout<<t_ch<<endl;

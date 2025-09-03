@@ -9,13 +9,24 @@ int main()
 
     string ss;
     cin>>ss;
+    int flag=0;
     int n=ss.size();
+    int x=0;
     for(int i=0;i<n;i++)
     {
-        if(ss[i]==ss[i+1]);
-        ss.erase(i,1);
-        i--;
+        for(int j=i;j<n;j++)
+        {
+           if(ss[i]==s[x])
+           {
+            x++;
+            flag++;
+            
+            break;
+
+           }
+        }
 
     }
-    cout<<ss<<endl;
+    if(flag==5)cout<<"YES"<<endl;
+    else{cout<<"NO"<<endl;}
 }

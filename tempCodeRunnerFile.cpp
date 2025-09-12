@@ -1,1 +1,1 @@
-cout<<t_ch<<endl;
+  cout<<s<<endl;

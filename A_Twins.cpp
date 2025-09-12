@@ -16,8 +16,8 @@ int main()
     int count=0;
     int sum2=0;
     sort(v.begin(),v.end(),greater<int>());
-    for(auto u:v)cout<<u<<" ";
-    cout<<endl;
+   
+    
     int i=0;
     while(1)
     {

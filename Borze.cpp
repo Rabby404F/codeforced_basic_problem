@@ -8,7 +8,7 @@ int main()
     string s;
     cin>>s;
     vector<char>v;
-    cout<<s<<endl;
+   
  
  
     for(int i=0;i<s.size();i++)

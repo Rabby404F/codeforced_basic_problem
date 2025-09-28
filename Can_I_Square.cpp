@@ -9,14 +9,14 @@ int main()
     int x;
     cin>>x;
     long long arr[x];
-    int sum=0;
+    long long sum=0;
     for(int i=0;i<x;i++)
     {
         cin>>arr[i];
         sum+=arr[i];
     }
     
-    int r=sqrt(sum);
+    long long r=sqrt(sum);
     if(r*r==sum)cout<<"Yes"<<endl;
     else cout<<"NO"<<endl;
 }

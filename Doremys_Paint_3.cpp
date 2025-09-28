@@ -11,6 +11,7 @@ int main()
     {
         cin>>arr[i];
     }
+
      int sum=arr[0]+arr[1];
     
     int cnt=0;

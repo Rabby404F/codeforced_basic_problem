@@ -1,1 +1,1 @@
-  cout<<s<<endl;
+cout<<v[i]-v[i-1]<<endl;

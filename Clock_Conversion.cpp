@@ -27,13 +27,18 @@ int main()
         {
             r2=r%12;
         }
-        if(r<13)
+         if(r==0)
+        {
+             cout<<setw(2)<<setfill('0')<<"12"<<":"<<setw(2)<<setfill('0')<<f<<" AM"<<endl;;
+        }
+        else if(r<13)
         { 
             cout<<setw(2)<<setfill('0')<<r<<":"<<setw(2)<<setfill('0')<<f;
             if(r<12){
                 cout<<" AM"<<endl;
             }else cout<<" PM"<<endl;
         }
+        
         else cout<<setw(2)<<setfill('0')<<r2<<":"<<setw(2)<<setfill('0')<<f<<" PM"<<endl;
 
     }

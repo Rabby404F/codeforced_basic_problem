@@ -9,16 +9,23 @@ int main()
     {
         cin>>arr[i];
     }
-    int mcnt=0;
-    int ocnt=0;
-    int final=0;
-
+    
+    int cnt=0;
+    int tcnt=0;
     for(int i=0;i<x;i++)
     {
-        if(arr[i]==1)ocnt++;
-        else if(arr[i]==-1)
+        if(arr[i]>0){ tcnt+=arr[i];
+       }
+        else if(arr[i]<0 )
+     {    if(tcnt==0)
         {
-            mcnt++
-        }
+          cnt+=abs(arr[i]);  
+        
+        } 
+        else{ 
+         tcnt-=abs(arr[i]);}
+                            }
+    
     }
+    cout<<cnt<<endl;
 }

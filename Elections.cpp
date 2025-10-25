@@ -1,36 +1,25 @@
 #include<iostream>
-#include<algorithm>
 using namespace std;
 int main()
-{   int t;
+{   int t ;
     cin>>t;
     while(t--){
-    long long arr[3];
-   for(long long i=0;i<3;i++)
-   {
-    cin>>arr[i];
-   }
-   long long m=max(arr[0],max(arr[1],arr[2]));
-   long long maximum=m+1;
-  
-
-   if(arr[0]==arr[1]&& arr[1]==arr[2])
-   {
-    cout<<"1 1 1"<<endl;
-   }
-   else{
-   
-   if(arr[0]<m)
-   {cout<<(maximum-arr[0])<<" ";}
-   else cout<<"0 ";
-    if(arr[1]<m)
-{cout<<(maximum-arr[1])<<" ";}
-   else cout<<"0 ";
-    if(arr[2]<m)
-   {cout<<(maximum-arr[2])<<endl;}
-   else cout<<"0"<<endl;;
-}
+    long long a,b,c;
+    cin>>a>>b>>c;
+    if(a==b && b==c)
+    {
+        cout<<a+1<<" "<<b+1<<" "<<c+1<<endl;
     }
-   
-
+    else
+    {
+       
+       if(a>b &&a>c)
+       {cout<<"0 "<<(a-b)+1<<" "<<(a-c)+1<<endl;}
+       else  if(b>a &&b>c)
+       {cout<<(b-a)+1<<" 0 "<<(b-c)+1<<endl;}
+       else  if(c>b &&c>a)
+       {cout<<(c-a)+1<<" "<<(c-b)+1<<" 0"<<endl;}
+        
+    }
+}
 }

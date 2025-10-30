@@ -21,8 +21,9 @@ int main() {
      cin>>s;
      string s1=s;
      sort(s1.begin(),s1.end());
-     int f=unique(s1.begin(),s1.end())-s1.begin();
-     if(f==1 && s1.back()=='0')
+    
+     
+     if(s1.back()=='0')
      {
         cout<<0<<endl;
     

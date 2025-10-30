@@ -11,16 +11,24 @@
 using namespace std;
 
 #define fast_io ios::sync_with_stdio(false); cin.tie(0);
-namespace n{
-void a()
-{
-  cout<<"Hello"<<endl;
-}
-}
+
 int main() {
   fast_io;
-   int a;
-
-n::a();
+     int n;
+     cin>>n;
+     vector<int>v(n);
+     int sum=0;
+     for(auto &x:v)
+     {
+        cin>>x;
+        sum+=x;
+     }
+     if(sum%4==0)
+     {
+        cout<<(sum/4)<<endl;
+     }
+     else{
+        cout<<(sum/4)+1<<endl;
+     }
 return 0;
 }

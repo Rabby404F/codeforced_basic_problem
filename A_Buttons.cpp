@@ -11,16 +11,23 @@
 using namespace std;
 
 #define fast_io ios::sync_with_stdio(false); cin.tie(0);
-namespace n{
-void a()
-{
-  cout<<"Hello"<<endl;
-}
-}
+
 int main() {
   fast_io;
-   int a;
+  int t;
+  cin>>t;
+  while(t--)
+  {
+     vector<long long>v(3);
+     long long sum=0;
+     for(auto &x:v)
+     {
+        cin>>x;
+        sum+=x;
+     }
+     if(sum%2!=0)cout<<"First"<<endl;
+     else cout<<"Second"<<endl;
+    }
 
-n::a();
 return 0;
 }

@@ -11,16 +11,20 @@
 using namespace std;
 
 #define fast_io ios::sync_with_stdio(false); cin.tie(0);
-namespace n{
-void a()
-{
-  cout<<"Hello"<<endl;
-}
-}
+
 int main() {
   fast_io;
-   int a;
-
-n::a();
+  int t;
+  cin>>t;
+  while(t--){
+  int x;
+  cin>>x;
+     string s,t;
+     cin>>s>>t;
+     sort(s.begin(),s.end());
+     sort(t.begin(),t.end());
+     if(s==t)cout<<"YES"<<endl;
+     else cout<<"NO"<<endl;
+  }
 return 0;
 }

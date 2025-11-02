@@ -14,15 +14,14 @@ using namespace std;
 
 int main() {
   fast_io;
-     int n;
-     cin>>n;
-     vector<int>v(n);
-     int sum=0;
-     for(auto &x:v)
+     int a,b;
+     cin>>a>>b;
+     if(a>b)
      {
-        cin>>x;
+        int t=a;
+        a=b;
+        b=t;
      }
-     sort(v.begin(),v.end());
-     
+     cout<<a/a<<"/"<<b/a<<endl;
 return 0;
 }

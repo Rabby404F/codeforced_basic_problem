@@ -14,15 +14,31 @@ using namespace std;
 
 int main() {
   fast_io;
+  int t;
+  cin>>t;
+  while(t--){
      int n;
      cin>>n;
      vector<int>v(n);
-     int sum=0;
+     int cnt=0;
      for(auto &x:v)
-     {
+    { 
         cin>>x;
-     }
-     sort(v.begin(),v.end());
-     
+    }
+    for(int i=0;i<v.size()-1;i++)
+    {
+        if(abs(v[i]-v[i+1])==5 || abs(v[i]-v[i+1])==7)
+        {
+            continue;
+        }
+        else{
+            cnt++;
+            break;
+        }
+    }
+    if(cnt==0)cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;
+}
+
 return 0;
 }

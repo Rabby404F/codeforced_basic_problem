@@ -14,24 +14,35 @@ using namespace std;
 
 int main() {
   fast_io;
+  int t;
+  cin>>t;
+  while(t--){
      int n;
      cin>>n;
      string s;
      cin>>s;
-     vector<string>temp;
+     queue<string>q;
      for(int i=0;i<n;i++)
      {  if((s[i]!='a'&& s[i]!='e') && (s[i+1]=='a' ||s[i+1]=='e') && (s[i+2]!='a'&& s[i+2]!='e') && (s[i+3]!='a' && s[i+3]!='e'))
-        { string t=t+s[i]+s[i+1]+s[i+2];
-            temp.push_back(t);
+        {
+            q.push(s.substr(i, 3));
             i=i+2;
         }
        else if((s[i]!='a' &&s[i]!='e') && (s[i+1]=='a' ||s[i+1]=='e'))
-        {   string t=t+s[i]+s[i+1];
-            temp.push_back(t);
+        {
+            q.push(s.substr(i, 2));
             i++;
            
         }
      }
-     for(auto u:temp)cout<<u<<" ";
+    
+     while (!q.empty()) {
+            cout << q.front();
+            q.pop();
+            if (!q.empty()) cout << "."; 
+           
+     }
+      cout<<endl;
+    }
 return 0;
 }

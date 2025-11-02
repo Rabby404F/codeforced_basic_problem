@@ -14,15 +14,13 @@ using namespace std;
 
 int main() {
   fast_io;
-     int n;
-     cin>>n;
-     vector<int>v(n);
-     int sum=0;
-     for(auto &x:v)
-     {
-        cin>>x;
-     }
+  int n;
+  cin>>n;
+  while(n--){
+     vector<int>v(4);
+     for(auto &x:v)cin>>x;
      sort(v.begin(),v.end());
-     
+     cout<<v[0]<<" "<<v[0]<<" "<<v[0]<<endl;
+  }
 return 0;
 }

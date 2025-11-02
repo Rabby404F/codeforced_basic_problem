@@ -8,15 +8,17 @@ int main()
   char st='a';
   int sum=0;
   map<char,int>m;
-   for(int i=0;i<s.length();i++)
+  int a=1;
+   for(int i='a';i<='z';i++)
    {
-       int r=abs(s[i]-st);
-       int x='z'-st+s[i];
-       cout<<r<<" "<<x<<endl;
-       if(r<x){sum=sum+r;}
-       else{sum=sum+x;}
-       
-       st=s[i];
+    m[i]=a;
+    a++;
    }
-   cout<<sum<<endl;
+   sum+=min(abs(m['a']-m[s[0]]),(26-abs(m['a']-m[s[0]])));
+   for(int i=1;i<s.size();i++)
+   {
+    sum+=min(abs(m[s[i-1]]-m[s[i]]),(26-abs(m[s[i-1]]-m[s[i]])));
+   }
+    cout<<sum<<endl;
+   
 }

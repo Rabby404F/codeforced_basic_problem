@@ -1,37 +1,17 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include <algorithm>
-#include <map>
-#include <set>
-#include <queue>
-#include <stack>
-#include <utility>
-
+#include<iostream>
+#include<cmath>
 using namespace std;
-
-#define fast_io ios::sync_with_stdio(false); cin.tie(0);
-
-int main() {
-  fast_io;
-     int n;
-     cin>>n;
-     string s;
-     cin>>s;
-     vector<string>temp;
-     for(int i=0;i<n;i++)
-     {  if((s[i]!='a'&& s[i]!='e') && (s[i+1]=='a' ||s[i+1]=='e') && (s[i+2]!='a'&& s[i+2]!='e') && (s[i+3]!='a' && s[i+3]!='e'))
-        { string t=t+s[i]+s[i+1]+s[i+2];
-            temp.push_back(t);
-            i=i+2;
-        }
-       else if((s[i]!='a' &&s[i]!='e') && (s[i+1]=='a' ||s[i+1]=='e'))
-        {   string t=t+s[i]+s[i+1];
-            temp.push_back(t);
-            i++;
-           
-        }
-     }
-     for(auto u:temp)cout<<u<<" ";
-return 0;
+int main()
+{
+  int a,b;
+  cin>>a>>b;
+  if(a<b)
+  {
+    int t=a;
+    a=b;
+    b=t;
+  }
+  
+  if(abs(a-b)==1 || abs((a%10)-b)==1)cout<<"YES"<<endl;
+  else cout<<"NO"<<endl;
 }

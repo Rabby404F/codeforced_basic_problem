@@ -17,19 +17,34 @@ int main() {
   int t;
   cin>>t;
   while(t--){
-     int a,b,c,d;
-     cin>>a>>b>>c>>d;
-    
-     int cnt=0;
-     for(int i=a;i<=b;i++)
+     long long a,b,c;
+     cin>>a>>b>>c;
+     if(a>b)
      {
-        if(i==c || i==d)
-        {
-            cnt++;
-        }
+        int temp=a;
+        a=b;
+        b=temp;
      }
-     if(cnt==0)cout<<"NO"<<endl;
-     else cout<<"YES"<<endl;
+
+    long long cnt=0;
+    long long i=1;
+    while(1){
+        
+        if(i%2 != 0)
+        {
+            a+=b;
+            cnt++;
+            i++;
+        }
+        else{
+            b+=a;
+            cnt++;
+            i++;
+        }
+        if(a>c || b>c)break;
     }
+    cout<<cnt<<endl;
+}
+
 return 0;
 }

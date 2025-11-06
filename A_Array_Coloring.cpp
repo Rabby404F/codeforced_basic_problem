@@ -16,20 +16,21 @@ int main() {
   fast_io;
   int t;
   cin>>t;
-  while(t--){
-     int a,b,c,d;
-     cin>>a>>b>>c>>d;
-    
+  while(t--)
+  {
+     int n;
+     cin>>n;
      int cnt=0;
-     for(int i=a;i<=b;i++)
-     {
-        if(i==c || i==d)
+     vector<int>v(n);
+     for(auto &x:v)
         {
-            cnt++;
+            cin>>x;
+            cnt+=x;
         }
-     }
-     if(cnt==0)cout<<"NO"<<endl;
-     else cout<<"YES"<<endl;
+        if(cnt%2==0)cout<<"YES"<<endl;
+        else cout<<"NO"<<endl;
     }
+
+
 return 0;
 }

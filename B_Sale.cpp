@@ -7,6 +7,7 @@
 #include <queue>
 #include <stack>
 #include <utility>
+#include<cmath>
 
 using namespace std;
 
@@ -16,13 +17,22 @@ int main() {
   fast_io;
      int n,m;
      cin>>n>>m;
-     vector<int>v(m);
-     for(auto &x:v)
+     vector<int>v(n);
+     for(auto &x:v)cin>>x;
+     sort(v.begin(),v.end());
+     int cnt=0;
+     int sum=0;
+     for(int i=0;i<v.size();i++)
      {
-        cin>>x;
+       if(cnt==m)break;
+       else if(v[i]<0)
+       {
+        sum+=abs(v[i]);
+        cnt++;
+        
+       }
      }
-     
-    sort(v.begin(),v.begin()+n);
-    cout<<v[n-1]-v[0]<<endl;
+     cout<<sum<<endl;
+
 return 0;
 }

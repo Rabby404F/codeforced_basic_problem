@@ -17,13 +17,22 @@ int main() {
   int t;
   cin>>t;
   while(t--){
-     string s;
-     cin>>s;
-     string s1=s;
-     reverse(s1.begin(),s1.end());
-     s+=s1;
-     cout<<s<<endl;
-  }
-
+     int n;
+     cin>>n ;
+     vector<int>v(n);
+     for(auto &x:v)cin>>x;
+     int ecnt=0;
+     int ocnt=0;
+     for(auto u:v)
+     {
+        if(u%2==0)
+        {
+            ecnt+=u;
+        }
+        else ocnt+=u;
+     }
+     if(ecnt>ocnt)cout<<"YES"<<endl;
+     else cout<<"NO"<<endl;
+    }
 return 0;
 }

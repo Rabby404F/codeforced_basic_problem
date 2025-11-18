@@ -14,15 +14,21 @@ using namespace std;
 
 int main() {
   fast_io;
-     int n,m;
-     cin>>n>>m;
-     vector<int>v(m);
-     for(auto &x:v)
+  int t;
+  cin>>t;
+  while(t--){
+     int n;
+     cin>>n;
+     deque<char>dq(n);
+     for(auto &x:dq)cin>>x;
+     while(dq.front()!=dq.back() && !dq.empty())
      {
-        cin>>x;
+        dq.pop_front();
+        dq.pop_back();
      }
+     cout<<dq.size()<<endl;
+    }
+
      
-    sort(v.begin(),v.begin()+n);
-    cout<<v[n-1]-v[0]<<endl;
 return 0;
 }

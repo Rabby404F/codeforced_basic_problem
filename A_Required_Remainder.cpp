@@ -14,15 +14,16 @@ using namespace std;
 
 int main() {
   fast_io;
-     int n,m;
-     cin>>n>>m;
-     vector<int>v(m);
-     for(auto &x:v)
-     {
-        cin>>x;
-     }
-     
-    sort(v.begin(),v.begin()+n);
-    cout<<v[n-1]-v[0]<<endl;
+  int t;
+  cin>>t;
+  while(t--){
+      long long x,y,n;
+      cin>>x>>y>>n;
+      if (n-n % x + y <= n) {
+			cout << n - n % x + y << endl;
+		} else {
+			cout << n-n% x- (x- y) << endl;
+		}
+  }
 return 0;
 }

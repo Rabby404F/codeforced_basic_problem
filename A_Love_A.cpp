@@ -14,15 +14,18 @@ using namespace std;
 
 int main() {
   fast_io;
-     int n,m;
-     cin>>n>>m;
-     vector<int>v(m);
-     for(auto &x:v)
-     {
-        cin>>x;
-     }
-     
-    sort(v.begin(),v.begin()+n);
-    cout<<v[n-1]-v[0]<<endl;
+     string s;
+      cin>>s;
+
+      int cnt=0;
+
+      for(char u:s)
+      {
+        if(u=='a') cnt++;
+      }
+
+      if(cnt>s.length()/2) cout<<s.length()<<endl;
+      else cout<<cnt*2-1<<endl;
+
 return 0;
 }

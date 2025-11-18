@@ -17,13 +17,25 @@ int main() {
   int t;
   cin>>t;
   while(t--){
+    int n;
+    cin>>n;
      string s;
      cin>>s;
-     string s1=s;
-     reverse(s1.begin(),s1.end());
-     s+=s1;
-     cout<<s<<endl;
-  }
+     int flag=0;
+     for(int i=0;i<s.size();i++)
+     {
+        for(int j=0;j<i;j++)
+        {
+            if(s[j]==s[i] && s[j+1]!=s[i])
+            {
+                flag++;
+                break;
+            }
+        }
+     }
+     if(flag!=0)cout<<"NO"<<endl;
+     else cout<<"YES"<<endl;
+    }
 
 return 0;
 }

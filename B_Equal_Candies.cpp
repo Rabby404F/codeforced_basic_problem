@@ -14,15 +14,21 @@ using namespace std;
 
 int main() {
   fast_io;
-     int n,m;
-     cin>>n>>m;
-     vector<int>v(m);
-     for(auto &x:v)
+  int t;
+  cin>>t;
+  while(t--){
+     int n;
+     cin>>n;
+     vector<int>v(n);
+     for(auto &x:v)cin>>x;
+     sort(v.begin(),v.end());
+     int cnt=0;
+     for(int i=1;i<n;i++)
      {
-        cin>>x;
+        cnt+=(v[i]-v[0]);
      }
-     
-    sort(v.begin(),v.begin()+n);
-    cout<<v[n-1]-v[0]<<endl;
+     cout<<cnt<<endl;
+    }
+
 return 0;
 }

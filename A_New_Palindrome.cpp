@@ -14,15 +14,15 @@ using namespace std;
 
 int main() {
   fast_io;
-     int n,m;
-     cin>>n>>m;
-     vector<int>v(m);
-     for(auto &x:v)
-     {
-        cin>>x;
-     }
-     
-    sort(v.begin(),v.begin()+n);
-    cout<<v[n-1]-v[0]<<endl;
+  int t;
+  cin>>t;
+  while(t--){
+     string s;
+     cin>>s;
+     sort(s.begin(),s.end());
+     int n=unique(s.begin(),s.end())-s.begin();
+     if(n>=3)cout<<"YES"<<endl;
+     else cout<<"NO"<<endl;
+  }
 return 0;
 }

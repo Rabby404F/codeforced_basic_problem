@@ -14,15 +14,20 @@ using namespace std;
 
 int main() {
   fast_io;
-     int n,m;
-     cin>>n>>m;
-     vector<int>v(m);
-     for(auto &x:v)
+  int t;
+  cin>>t;
+  while(t--){
+    int n;
+    cin>>n;
+     string s;
+     cin>>s;
+     string sb="FB";
+     if(s.find(sb)!= string :: npos)
      {
-        cin>>x;
+        cout<<"YES"<<endl;
      }
-     
-    sort(v.begin(),v.begin()+n);
-    cout<<v[n-1]-v[0]<<endl;
+     else cout<<"NO"<<endl;
+    }
+
 return 0;
 }

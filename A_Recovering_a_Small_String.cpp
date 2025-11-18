@@ -29,15 +29,40 @@ int main() {
 
      }
   
-     int r=x/3;
-     
-     if(x%3==0)
-     {
-        cout<<m[r]<<m[r]<<m[r]<<endl;
-     }
-     else{
-        cout<<m[r]<<m[r]<<m[r+1]<<endl;
-     }
+    string temp;
+    if(x>=28)
+    {
+      temp+=m[26];
+      x-=26;
+    }
+    else
+    {
+      temp+=m[x-2];
+      x-=x-2;
+    }
+    if(x>=27)
+    {
+      temp+=m[26];
+      x-=26;
+    }
+     else
+    {
+      temp+=m[x-1];
+      x-=x-1;
+    }
+
+    if(x>=26)
+    {
+      temp+=m[26];
+      x-=26;
+    }
+     else
+    {
+      temp+=m[x];
+    }
+    reverse(temp.begin(),temp.end());
+    cout<<temp<<endl;
+
   }
 return 0;
 }

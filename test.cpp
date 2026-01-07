@@ -12,6 +12,6 @@ int main()
     b=t;
   }
   
-  if(abs(a-b)==1 || abs((a%10)-b)==1)cout<<"YES"<<endl;
-  else cout<<"NO"<<endl;
+  if(abs(a-b)==1 || abs((a%10)-b)==1)cout<<"Yes"<<endl;
+  else cout<<"No"<<endl;
 }

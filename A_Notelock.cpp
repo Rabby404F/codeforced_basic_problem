@@ -24,7 +24,7 @@ int main() {
         if(s[i]=='1')
         {
            int r=max(1,i-(k+1));
-           for(int j=i;j>=i-r;j--)
+           for(int j=i;;j--)
            {
             if(s[j]=='1') continue;
             else if(j<i-r)

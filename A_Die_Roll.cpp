@@ -16,12 +16,22 @@ int main() {
   fast_io;
      int a,b;
      cin>>a>>b;
-     if(a>b)
-     {
-        int t=a;
-        a=b;
-        b=t;
-     }
-     cout<<a/a<<"/"<<b/a<<endl;
+    int t=max(a,b);
+    
+    t=6-t+1;
+     if(t==6)cout<<1<<"/"<<1<<endl;
+
+     else if(t%3==0 )
+    {
+      cout<<t/3<<"/"<<2<<endl;
+    }
+    else if(t%2==0 )
+    {
+      cout<<t/2<<"/"<<3<<endl;
+    }
+    else
+    {
+      cout<<t<<"/"<<6<<endl;
+    }
 return 0;
 }

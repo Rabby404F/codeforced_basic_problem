@@ -17,12 +17,17 @@ int main() {
   int t;
   cin>>t;
   while(t--){
-     string s;
-     cin>>s;
-     sort(s.begin(),s.end());
-     int n=unique(s.begin(),s.end())-s.begin();
-     if(n>=3)cout<<"YES"<<endl;
-     else cout<<"NO"<<endl;
+  string s;
+  cin>>s;
+  map<char,int>m;
+  for(char u:s)m[u]++;
+  int cnt=0;
+  for(char i='a';i<='z';i++)
+  {
+     if(m[i]%2!=0)cnt++;
+    
   }
-return 0;
+  if(cnt-1>1)cout<<"NO"<<endl;
+  else cout<<"YES"<<endl;
+}
 }

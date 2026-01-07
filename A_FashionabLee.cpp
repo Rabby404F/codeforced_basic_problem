@@ -19,7 +19,7 @@ int main() {
   while(t--){
      long long n;
      cin>>n;
-     if(n>3)cout<<"YES"<<endl;
+     if(n%4==0)cout<<"YES"<<endl;
      else cout<<"NO"<<endl;
   }
 
